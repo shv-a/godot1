@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="1"
+run/main_scene="res://scenes/node_2d.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
 
 [dotnet]
 
@@ -21,3 +27,10 @@ project/assembly_name="1"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/nklbdev.aseprite_importers/plugin.cfg")
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Enemies"
+2d_physics/layer_3="Obstacles"
+2d_physics/layer_4="Items"

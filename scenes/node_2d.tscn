@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj42elkbuneli"]
+
+[ext_resource type="Texture2D" uid="uid://ogbiolcuws7v" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0112.png" id="1_y6ss6"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+
+[node name="player" type="Sprite2D" parent="."]
+position = Vector2(53, 64)
+scale = Vector2(3, 3)
+texture = ExtResource("1_y6ss6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+zoom = Vector2(0.2, 0.2)
