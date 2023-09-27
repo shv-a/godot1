@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://vb7iexh8huyl"]
+
+[ext_resource type="Script" path="res://scenes/mobs/Ppidpyvas1.gd" id="1_fsouc"]
+[ext_resource type="Texture2D" uid="uid://dy0q01hsh4hl5" path="res://assets/characters/dragon/Attack4.png" id="1_ic7en"]
+[ext_resource type="Texture2D" uid="uid://bnoh70nxdfkes" path="res://assets/kenney_platformer-art-requests/Tiles/laserYellowBurst.png" id="3_ve5wf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hox87"]
+radius = 55.3624
+
+[node name="pidpyvas1" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_fsouc")
+
+[node name="MobPicture" type="Sprite2D" parent="."]
+texture = ExtResource("1_ic7en")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4.76837e-07, 10)
+rotation = 0.359538
+shape = SubResource("CircleShape2D_hox87")
+
+[node name="Explosion" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_ve5wf")
+
+[node name="PostrilStartPositions" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="PostrilStartPositions"]
+position = Vector2(0, 128)
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="Attack" type="Timer" parent="Timers"]
+wait_time = 3.0
+
+[node name="DeathEffect" type="Timer" parent="Timers"]
+
+[connection signal="timeout" from="Timers/Attack" to="." method="_on_attack_timeout"]
+[connection signal="timeout" from="Timers/DeathEffect" to="." method="_on_death_effect_timeout"]

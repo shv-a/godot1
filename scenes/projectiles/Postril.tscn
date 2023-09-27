@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfih7bu25u3pv"]
+
+[ext_resource type="Script" path="res://scenes/projectiles/Postril.gd" id="1_51gcx"]
+[ext_resource type="Texture2D" uid="uid://jlomlinsj0v6" path="res://assets/kenney_platformer-art-requests/Tiles/laserYellowHorizontal.png" id="1_ey5kr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ery"]
+size = Vector2(70, 18)
+
+[node name="Postril" type="Area2D"]
+collision_layer = 16
+collision_mask = 31
+script = ExtResource("1_51gcx")
+
+[node name="Flying" type="Sprite2D" parent="."]
+position = Vector2(35, 0)
+texture = ExtResource("1_ey5kr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(35, 0)
+shape = SubResource("RectangleShape2D_w5ery")
+
+[node name="SelfDestructTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="SelfDestructTimer" to="." method="_on_self_destruct_timer_timeout"]
