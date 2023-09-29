@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dn5sntwfwja0l" path="res://assets/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="1_0iqrq"]
 [ext_resource type="Script" path="res://scenes/dvizh.gd" id="1_74kv5"]
 [ext_resource type="PackedScene" uid="uid://vb7iexh8huyl" path="res://scenes/mobs/Ppidpyvas1.tscn" id="3_hwgn4"]
-[ext_resource type="PackedScene" uid="uid://dj42elkbuneli" path="res://scenes/player/Player.tscn" id="4_2o20f"]
+[ext_resource type="PackedScene" uid="uid://dj42elkbuneli" path="res://scenes/player/Player.tscn" id="4_wi885"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ptbfg"]
 texture = ExtResource("1_0iqrq")
@@ -5369,11 +5369,10 @@ position = Vector2(92.4799, 396.122)
 [node name="pidpyvas3" parent="." instance=ExtResource("3_hwgn4")]
 position = Vector2(711.779, 168.935)
 
-[node name="Player" parent="." instance=ExtResource("4_2o20f")]
-position = Vector2(208.838, 123.274)
+[node name="Player" parent="." instance=ExtResource("4_wi885")]
 
-[node name="Camera2D2" type="Camera2D" parent="Player"]
-zoom = Vector2(3.5, 3.5)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
 
 [connection signal="postril" from="pidpyvas1" to="." method="_on_pidpyvas_1_postril"]
 [connection signal="postril" from="Player" to="." method="_on_player_postril"]
