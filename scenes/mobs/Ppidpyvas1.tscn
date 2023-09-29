@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bnoh70nxdfkes" path="res://assets/kenney_platformer-art-requests/Tiles/laserYellowBurst.png" id="3_ve5wf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hox87"]
-radius = 55.3624
+radius = 18.0278
 
 [node name="pidpyvas1" type="CharacterBody2D"]
 collision_layer = 2
@@ -13,10 +13,11 @@ collision_mask = 7
 script = ExtResource("1_fsouc")
 
 [node name="MobPicture" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_ic7en")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.76837e-07, 10)
+position = Vector2(3, 5)
 rotation = 0.359538
 shape = SubResource("CircleShape2D_hox87")
 
@@ -27,7 +28,7 @@ texture = ExtResource("3_ve5wf")
 [node name="PostrilStartPositions" type="Node2D" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="PostrilStartPositions"]
-position = Vector2(0, 128)
+position = Vector2(27, 0)
 
 [node name="Timers" type="Node" parent="."]
 

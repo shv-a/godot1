@@ -14,7 +14,7 @@ func _process(_delta):
 	
 	# input 
 	var direction = Input.get_vector("left", "right", "up", "down")
-	velocity = direction * speed
+	velocity = direction * max_speed
 	move_and_slide()
 	
 	# rotate 
