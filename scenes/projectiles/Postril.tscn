@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dfih7bu25u3pv"]
 
-[ext_resource type="Script" path="res://scenes/projectiles/Postril.gd" id="1_51gcx"]
-[ext_resource type="Texture2D" uid="uid://jlomlinsj0v6" path="res://assets/kenney_platformer-art-requests/Tiles/laserYellowHorizontal.png" id="1_ey5kr"]
+[ext_resource type="Script" path="res://scenes/projectiles/postril.gd" id="1_7swc2"]
+[ext_resource type="Texture2D" uid="uid://jlomlinsj0v6" path="res://assets/kenney_platformer-art-requests/Tiles/laserYellowHorizontal.png" id="2_eywbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w5ery"]
 size = Vector2(8, 2)
@@ -9,13 +9,13 @@ size = Vector2(8, 2)
 [node name="Postril" type="Area2D"]
 collision_layer = 16
 collision_mask = 31
-script = ExtResource("1_51gcx")
+script = ExtResource("1_7swc2")
 speed = 550
 
 [node name="Flying" type="Sprite2D" parent="."]
 position = Vector2(-0.0635751, 0.00437136)
 scale = Vector2(-0.142542, 0.204589)
-texture = ExtResource("1_ey5kr")
+texture = ExtResource("2_eywbv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)

@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj42elkbuneli"]
+[gd_scene load_steps=4 format=3 uid="uid://31p45xgmqb00"]
 
-[ext_resource type="Texture2D" uid="uid://df885vp5tthg7" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0121.png" id="1_2sdio"]
-[ext_resource type="Script" path="res://scenes/player/Player.gd" id="1_uxi2w"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_f743h"]
+[ext_resource type="Texture2D" uid="uid://df885vp5tthg7" path="res://assets/kenney_tiny-dungeon/Tiles/tile_0121.png" id="2_7jqts"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u0s0w"]
 radius = 7.07107
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
-script = ExtResource("1_uxi2w")
+script = ExtResource("1_f743h")
 max_speed = 150
 
 [node name="PlayerImage" type="Sprite2D" parent="."]
 position = Vector2(3.8147e-06, 7.62939e-06)
 scale = Vector2(1.08, 1)
-texture = ExtResource("1_2sdio")
+texture = ExtResource("2_7jqts")
 metadata/MetadataTest1 = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
